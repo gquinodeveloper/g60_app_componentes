@@ -22,7 +22,15 @@ class AlertView extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                _showAlert(context);
+                //_showAlert(context);
+                print("onTap");
+              },
+              onDoubleTap: (){
+                print("Double tap");
+
+              },
+              onLongPress: (){
+                print("onLongPress tap");
               },
               child: Container(
                 width: 160.0,
@@ -96,8 +104,28 @@ class AlertView extends StatelessWidget {
               ),
             ],
           );
+        } else {
+           alert = AlertDialog(
+            title: const Text("Success WEB"),
+            content: const Text(
+                "This is a guide to building layouts in Flutter. You’ll build the layout for the following app"),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text("Si"),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text("No"),
+              ),
+            ],
+          );
         }
-
+        
         return alert;
       },
     );

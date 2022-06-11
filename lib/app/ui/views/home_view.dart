@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:g60_app_componentes/app/ui/views/alerts_view.dart';
 import 'package:g60_app_componentes/app/ui/views/avatars_view.dart';
+import 'package:g60_app_componentes/app/ui/views/cards_view.dart';
+import 'package:g60_app_componentes/app/ui/views/expanded_view.dart';
+import 'package:g60_app_componentes/app/ui/views/input_view.dart';
+import 'package:g60_app_componentes/app/ui/views/listview_builder_view.dart';
+import 'package:g60_app_componentes/app/ui/views/listview_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -91,6 +96,81 @@ class HomeView extends StatelessWidget {
             },
             title: const Text(
               "Avatars",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            trailing: const Icon(Icons.arrow_forward_ios),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const CardsView(),
+                ),
+              );
+            },
+            title: const Text(
+              "Cards",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            trailing: const Icon(Icons.arrow_forward_ios),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const ListViewView(),
+                ),
+              );
+            },
+            title: const Text(
+              "ListView",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            trailing: const Icon(Icons.arrow_forward_ios),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const ListViewBuilderView(),
+                ),
+              );
+            },
+            title: const Text(
+              "ListViewBuilder",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            trailing: const Icon(Icons.arrow_forward_ios),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const ExpandedView(),
+                ),
+              );
+            },
+            title: const Text(
+              "Expanded",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            trailing: const Icon(Icons.arrow_forward_ios),
+          ),
+           ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const InputView(),
+                ),
+              );
+            },
+            title: const Text(
+              "Input",
               style: TextStyle(fontSize: 18.0),
             ),
             trailing: const Icon(Icons.arrow_forward_ios),
